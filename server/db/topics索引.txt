@@ -1,0 +1,37 @@
+PUT topics
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "content": {
+        "type": "text"
+      },
+      "createTime": {
+        "type": "keyword",
+        "index": false,
+        "doc_values": false
+      },
+      "image":{
+        "properties": {
+		"imageurl": {
+			"type": "keyword",
+        "index": false,
+        "doc_values": false
+		}
+	
+	}
+      },
+      "logo": {
+          "type": "keyword"
+      },
+    "username": {
+          "type": "keyword"
+      },
+      "uId": {
+            "type": "long"
+      }
+    }
+  }
+}

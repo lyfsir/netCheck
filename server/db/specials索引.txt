@@ -1,0 +1,23 @@
+PUT specials
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "createTime": {
+        "type": "keyword",
+        "index": false,
+        "doc_values": false
+      },
+      "imgurl":{
+        "type": "keyword",
+        "index": false,
+        "doc_values": false
+      },
+      "name": {
+	  "type": "text"
+	}
+    }
+  }
+}

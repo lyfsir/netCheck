@@ -1,0 +1,62 @@
+PUT foods
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "title": {
+        "type": "text"
+      },
+      "username": {
+        "type": "keyword"
+      },
+      "userId": {
+         "type": "long"
+      },
+      "category":{
+        "type": "nested",
+        "properties": {
+            "cId":{
+                "type": "keyword"
+              },
+            "cName":{
+                "type": "keyword"
+              } 
+        }
+      },
+      "createTime": {
+        "type": "keyword",
+        "index": false,
+        "doc_values": false
+      },
+      "imgurl":{
+        "type": "keyword",
+        "index": false,
+        "doc_values": false
+      },
+      "hostScore":{
+        "type": "long"
+      },
+      "sId": {
+          "type": "long"
+      },
+      "attr":{
+        "type": "nested",
+        "properties": {
+          "attrIid":{
+            "type": "long"
+          },
+          "attrName":{
+            "type": "keyword"
+          },
+          "attrValue":{
+            "type": "keyword",
+            "index": false,
+            "doc_values": false
+          }
+        }
+      }
+    }
+  }
+}
